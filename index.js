@@ -1,5 +1,6 @@
 import { Client, GatewayIntentBits } from "discord.js";
 import dbInit from "./database.js";
+import apiInit from "./api.js";
 
 const client = new Client({
     intents: [
@@ -10,6 +11,7 @@ const client = new Client({
 });
 
 const supabase = dbInit();
+const api = apiInit();
 
 client.once("ready", () => {
     console.log("Bot is online!");
