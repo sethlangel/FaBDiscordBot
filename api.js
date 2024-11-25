@@ -4,6 +4,7 @@ export default function apiInit(){
 
     app.get('/', (req, res) => {
     res.send('Hello from Render!');
+    console.log("PING!")
     });
 
     const PORT = process.env.PORT || 3000;
